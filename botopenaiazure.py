@@ -3,6 +3,9 @@ from openai import AzureOpenAI
 from prompthelper import *
 
 def get_response_from_openai(user_input):
+    """
+    Creates an Azure OpenAI client and generates response using Azure Open AI endpoint & key
+    """
     client = AzureOpenAI(
         azure_endpoint =os.getenv("AZURE_OPENAI_ENDPOINT"),
         api_key=os.getenv("AZURE_OPENAI_KEY"),

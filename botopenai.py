@@ -4,6 +4,10 @@ from prompthelper import *
 from classifier import *
 
 def get_response_from_openai(user_input, classifier):
+    """
+    Creates an OpenAI client and generates response using OpenAI endpoint & key
+    """
+
     if not is_about_service_dogs(user_input, classifier):
         return "I'm sorry, I can only answer questions about service dogs."
     client = OpenAI()
